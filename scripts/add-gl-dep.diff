@@ -1,0 +1,13 @@
+--- debian/control	2016-01-07 18:16:14.531252359 +0000
++++ debian/control.new	2016-01-07 18:16:41.979693630 +0000
+@@ -26,7 +26,8 @@
+                libxcb-shm0-dev,
+                libglib2.0-dev,
+                zlib1g-dev,
+-               liblzo2-dev
++               liblzo2-dev,
++               libgl1-mesa-dev
+ Standards-Version: 3.9.6
+ Vcs-Git: git://anonscm.debian.org/collab-maint/cairo.git
+ Vcs-Browser: http://anonscm.debian.org/cgit/collab-maint/cairo.git
+

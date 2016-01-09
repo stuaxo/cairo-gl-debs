@@ -1,0 +1,46 @@
+#!/usr/bin/expect -f
+
+# Run dpk-source
+#
+# Delete default description
+#
+# Insert patch description
+#
+
+
+# run dpkg-commit
+spawn dpkg-source --commit
+
+# Wait for a prompt
+expect "Enter the desired patch name: "
+send "enable-gl.diff\n"
+
+# Wait for vim to load file
+expect "Description: <short summary of the patch>"
+
+# delete up until '---'
+send "d/---\n"
+
+# INSERT mode
+send "i"
+
+# Description text
+send " Description: Enables GL so that people can test it from a PPA.
+ .
+ cairo (1.13.0~20140204-0ubuntu1glppa) trusty; urgency=medium
+ .
+   * Enable GL.                                                         
+Author: Stuart Axon <stuaxo2@yahoo.com>
+"
+
+# Exit INSERT mode
+send "\x1b"
+
+# Save and quit
+send ":wq\n"
+
+# Hand over control to the user
+interact
+
+exit
+

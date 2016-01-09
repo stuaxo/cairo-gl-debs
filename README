@@ -1,0 +1,9 @@
+Build cairo debs with --enable-gl 
+
+
+Build everything
+$ ./build.sh
+
+Run tests from cairo-gl-smoke-tests
+$ ./masking-filling-stroking-glx
+$ ./operators-glx
