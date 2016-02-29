@@ -1,3 +1,11 @@
+This has been superceded, a cairo-gl ppa now exists for Ubuntu Wily:
+
+https://launchpad.net/~stu-axon/+archive/ubuntu/cairo-gl
+
+
+Old README
+==========
+
 Build cairo debs with --enable-gl 
 
 
